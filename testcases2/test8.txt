@@ -1,0 +1,9 @@
+let 
+   f = fn(x:int): int->int => fn(y:int):int => x PLUS y 
+in 
+   let 
+      g = (f 2) 
+   in 
+      (g 3) 
+   end  
+end

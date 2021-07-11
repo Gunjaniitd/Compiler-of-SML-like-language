@@ -1,0 +1,6 @@
+fun f(x:int):int->int => fn(y:int):int => x PLUS y;
+let 
+   g = if 2 EQUALS 1 then (f 3) else (f 4) fi 
+in  
+   (g 6) 
+end
