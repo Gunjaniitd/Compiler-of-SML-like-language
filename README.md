@@ -1,4 +1,4 @@
-# Design-of-Boolean-Lanuage
+# Compiler of SML-like language
 
 This folder contains :
 i) code - folder containing all program files
