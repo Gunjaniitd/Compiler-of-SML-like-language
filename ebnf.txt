@@ -1,0 +1,14 @@
+start ::= program EOF .
+program ::= statement{statement} .
+statement ::= formula ";" .
+formula ::= "IF" Expression "THEN" Expression "ELSE" Expression | Expression .
+Expression ::= Term "IMPLIES" Expression | Term .
+Term ::= Term "AND" factor | Term "OR" factor | Term "XOR" factor | Term "EQUALS" factor | factor .
+factor ::= Constant | Variable | "(" formula ")" | "NOT" formula .
+Constant ::= "TRUE" | "FALSE" .
+Variable ::= Letter{Letter} .
+Letter ::= Uppercase | Lowercase .
+Uppercase ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
+              | "U" | "V" | "W" | "X" | "Y" | "Z" .
+Lowercase ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t"
+              | "u" | "v" | "w" | "x" | "y" | "z" .
